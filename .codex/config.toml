@@ -18,6 +18,7 @@ history = true
 # 利用可能なエージェント
 # 詳細は agents/*.md を参照
 available = [
+    "requirements-agent",
     "ui-spec-agent",
     "basic-design-agent",
     "detailed-design-agent",
