@@ -18,6 +18,7 @@ history = true
 # 利用可能なエージェント
 # 詳細は agents/*.md を参照
 available = [
+    "ui-spec-agent",
     "implementation-agent-typescript",
     "implementation-agent-python",
     "implementation-agent-csharp",
