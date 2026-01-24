@@ -18,6 +18,7 @@ history = true
 # 利用可能なエージェント
 # 詳細は agents/*.md を参照
 available = [
+    # 開発エージェント
     "requirements-agent",
     "ui-spec-agent",
     "basic-design-agent",
@@ -29,7 +30,12 @@ available = [
     "implementation-agent-java",
     "unit-test-agent",
     "e2e-test-agent",
-    "code-review-agent"
+    "code-review-agent",
+    # PMエージェント
+    "pm-wbs-agent",
+    "pm-schedule-agent",
+    "pm-resource-agent",
+    "pm-risk-agent"
 ]
 
 [workspace]
