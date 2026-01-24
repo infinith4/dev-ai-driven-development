@@ -1,0 +1,4 @@
+import { jsxs as _jsxs, jsx as _jsx } from "react/jsx-runtime";
+export function ItemCard({ item, onDelete }) {
+    return (_jsxs("div", { className: "card", children: [_jsxs("h3", { children: [_jsxs("span", { className: "chip", children: ["#", item.id] }), item.name] }), item.description && _jsx("p", { className: "lead", children: item.description }), _jsxs("div", { className: "pill", children: [_jsxs("span", { className: "price", children: ["$", item.price.toFixed(2)] }), _jsx("span", { children: "\u2022" }), _jsxs("span", { children: [item.tags.length, " tags"] })] }), _jsx("div", { className: "tags", children: item.tags.length ? (item.tags.map((tag) => (_jsx("span", { className: "tag", children: tag }, tag)))) : (_jsx("span", { className: "tag", children: "untagged" })) }), _jsx("div", { className: "actions", children: _jsx("button", { className: "button-ghost", onClick: () => onDelete(item.id), children: "Delete" }) })] }));
+}

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"$PATH:$HOME/.npm-global/bin:$HOME/.local/bin:$HOME/.dotnet/tools:$HOME/bin\")",
+      "Bash(codex --version:*)",
+      "Bash(source ~/.bashrc)",
+      "Bash(codex --help:*)",
+      "Bash($HOME/.npm-global/bin/codex --help)"
+    ]
+  }
+}
