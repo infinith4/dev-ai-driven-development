@@ -19,6 +19,9 @@ history = true
 # 詳細は agents/*.md を参照
 available = [
     "ui-spec-agent",
+    "basic-design-agent",
+    "detailed-design-agent",
+    "api-spec-agent",
     "implementation-agent-typescript",
     "implementation-agent-python",
     "implementation-agent-csharp",
