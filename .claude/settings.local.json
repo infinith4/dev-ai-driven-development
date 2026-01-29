@@ -5,7 +5,9 @@
       "Bash(codex --version:*)",
       "Bash(source ~/.bashrc)",
       "Bash(codex --help:*)",
-      "Bash($HOME/.npm-global/bin/codex --help)"
+      "Bash($HOME/.npm-global/bin/codex --help)",
+      "WebFetch(domain:share.google)",
+      "WebFetch(domain:www.google.com)"
     ]
   }
 }

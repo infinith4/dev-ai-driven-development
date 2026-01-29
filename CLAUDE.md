@@ -32,23 +32,55 @@ AI駆動開発プロジェクトです。GitHub Copilot、Codex、Claude Codeを
 ### レビューフェーズ
 9. **コードレビューエージェント** - 品質・セキュリティレビュー
 
-## スキルファイル
+## Claude Code設定
 
-`.claude/skills/` ディレクトリに各エージェントの詳細スキルが定義されています：
+### ベストプラクティス
+
+`.claude/BEST_PRACTICES.md` に公式ベストプラクティスをまとめています。
+
+**5つの設計思想:**
+1. コンテキストウィンドウ管理が基盤
+2. 検証可能性を優先
+3. 段階的アプローチ（探索→計画→実装→検証）
+4. 環境カスタマイズの体系
+5. 失敗パターンの認識と回避
+
+**セッション管理:**
+- タスク間で `/clear` を使用
+- 2回失敗したら `/clear` して再出発
+- サブエージェントで調査を委任
+
+### スキルファイル
+
+`.claude/skills/` ディレクトリに各エージェントの詳細スキルが定義されています（新形式: `SKILL.md`）：
 
 ```
 .claude/skills/
-├── requirements/       # 要件定義
-├── ui-spec/           # 画面仕様書
-├── basic-design/      # 基本設計書
-├── detailed-design/   # 詳細設計書
-├── api-spec/          # API仕様書
-├── implementation/    # 実装
-├── unit-test/         # 単体テスト
-├── e2e-test/          # E2Eテスト
-├── code-review/       # コードレビュー
-└── codex-review/      # Codex連携レビュー
+├── requirements/       # 要件定義 (/requirements)
+├── ui-spec/           # 画面仕様書 (/ui-spec)
+├── basic-design/      # 基本設計書 (/basic-design)
+├── detailed-design/   # 詳細設計書 (/detailed-design)
+├── api-spec/          # API仕様書 (/api-spec)
+├── implementation/    # 実装 (/implementation)
+├── unit-test/         # 単体テスト (/unit-test)
+├── e2e-test/          # E2Eテスト (/e2e-test)
+├── code-review/       # コードレビュー (/code-review)
+├── codex-review/      # Codex連携レビュー (/codex-review)
+├── pm-wbs/            # WBS管理 (/pm-wbs)
+├── pm-schedule/       # スケジュール管理 (/pm-schedule)
+├── pm-resource/       # リソース管理 (/pm-resource)
+└── pm-risk/           # リスク管理 (/pm-risk)
 ```
+
+### フック設定
+
+`.claude/hooks.json` で自動フォーマット・リントを設定:
+- TypeScript/JavaScript: Prettier + ESLint
+- Python: Ruff format + check
+
+### 権限設定
+
+`.claude/settings.json` で安全なコマンドを許可リスト化
 
 ## 開発フロー
 
